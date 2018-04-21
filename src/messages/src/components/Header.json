@@ -1,0 +1,14 @@
+[
+  {
+    "id": "home.link",
+    "defaultMessage": "This is a default message"
+  },
+  {
+    "id": "aboutUs.link",
+    "defaultMessage": "This is a default message"
+  },
+  {
+    "id": "someotherpage.link",
+    "defaultMessage": "This is a default message"
+  }
+]

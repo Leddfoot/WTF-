@@ -1,0 +1,10 @@
+{
+    "home.link": "Home",
+    "aboutUs.link": "About Us",
+    "someotherpage.link": "Some Other Page",
+    "header.text": "WTF@?-Where's The Fish @?",
+    "dashboard.mainText": "This is the dashboard component",
+    "aboutus.mainText": "This is the about us component",
+    "someotherpage.mainText": "This is the someotherpage component",
+    "404.mainText": "This is the 404 component"
+}

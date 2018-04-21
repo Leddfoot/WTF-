@@ -1,0 +1,10 @@
+{
+  "home.link": "Hjem",
+  "aboutUs.link": "Om Oss",
+  "someotherpage.link": "Noe andre siden",
+  "header.text": "WTF@?-Hvor er Fiskene @?",
+  "dashboard.mainText": "denne er dashboard component",
+  "aboutus.mainText": "denne er the about us component",
+  "someotherpage.mainText": "denne er the someotherpage component",
+  "404.mainText": "Denne er the 404 component"
+}
