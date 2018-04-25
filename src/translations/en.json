@@ -6,5 +6,6 @@
     "dashboard.mainText": "This is the dashboard component",
     "aboutus.mainText": "This is the about us component",
     "someotherpage.mainText": "This is the someotherpage component",
-    "404.mainText": "This is the 404 component"
+    "404.mainText": "This is the 404 component",
+    "map.mainText": "Behold ... The Map"
 }

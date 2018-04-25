@@ -6,5 +6,6 @@
   "dashboard.mainText": "denne er dashboard component",
   "aboutus.mainText": "denne er the about us component",
   "someotherpage.mainText": "denne er the someotherpage component",
-  "404.mainText": "Denne er the 404 component"
+  "404.mainText": "Denne er the 404 component",
+  "map.mainText": "Kartet"
 }
