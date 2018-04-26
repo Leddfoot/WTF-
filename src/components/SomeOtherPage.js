@@ -24,13 +24,14 @@ export class SomeOtherPage extends React.Component {
   //       <div key={json.items.id}>
   //         <p>{json.items.id}{json.items.name}{json.items.description}</p>
   //       </div>
-  //   )
+  //   );
   // }
   // });
-  // };
+  // }
 
   componentDidMount() {
-    console.log(this.state.gitList);
+    // console.log(this.state.gitList);
+    // console.log(this.state);
     fetch('https://api.github.com/search/repositories?q=language:javascript&sort=stars&order=desc&per_page=100')
     .then (results => {
       return results.json();
@@ -43,11 +44,11 @@ export class SomeOtherPage extends React.Component {
         )
       })
       this.setState({gitList: gitList});
-      console.log("state", this.state.gitList);
+      console.log("state", this.state);
     })
   };
 
-  
+
 
   render(){
     return (

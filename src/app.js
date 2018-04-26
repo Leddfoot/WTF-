@@ -16,6 +16,7 @@ import getVisiblefishCaughtOccurences from './selectors/fishCaughtOccurrence';
 import Dashboard from "./components/Dashboard";
 import AboutUs from "./components/AboutUs";
 import Header from "./components/Header";
+import LatestCatches from "./components/LatestCatches";
 import Map from "./components/Map";
 import NotFoundPage from "./components/NotFoundPage";
 import SomeOtherPage from "./components/SomeOtherPage";
@@ -26,9 +27,14 @@ import './styles/styles.scss';
 const store = configureStore();
 
 
-store.dispatch(addFishCaughtOccurrence( { fishType:'firstfish', weight:'7 lbs' } ));
-store.dispatch(addFishCaughtOccurrence( { fishType:'catfish', weight:'30 lbs' } ));
-store.dispatch(setTextFilter('fi'));
+store.dispatch(addFishCaughtOccurrence( { fishType:'Kveite', weight:'1 kilo' } ));
+store.dispatch(addFishCaughtOccurrence( { fishType:'catfish', weight:'2 kilo' } ));
+store.dispatch(addFishCaughtOccurrence( { fishType:'catfish', weight:'3 kilo' } ));
+store.dispatch(addFishCaughtOccurrence( { fishType:'catfish', weight:'4 kilo' } ));
+store.dispatch(addFishCaughtOccurrence( { fishType:'catfish', weight:'5 kilo' } ));
+store.dispatch(addFishCaughtOccurrence( { fishType:'catfish', weight:'7000 kilo' } ));
+
+// store.dispatch(setTextFilter('fi'));
 
 const state = store.getState();
 const visiblefishCaughtOccurences = getVisiblefishCaughtOccurences(state.fishCaught, state.filters);
@@ -52,18 +58,21 @@ const messages = {
 // React Router
 const routes = (
   <IntlProvider locale={language} messages={messages[language]}>
-    <BrowserRouter>
-      <div>
-        <Header />
-        <Switch>
-          <Route path="/" component={Dashboard} exact={true} />
-          <Route path="/aboutus" component={AboutUs} />
-          <Route path="/map" component={Map} />
-          <Route path="/someotherpage" component={SomeOtherPage} />
-          <Route component={NotFoundPage} />
-        </Switch>
-      </div>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <div>
+          <Header />
+          <Switch>
+            <Route path="/" component={Dashboard} exact={true} />
+            <Route path="/aboutus" component={AboutUs} />
+            <Route path="/map" component={Map} />
+            <Route path="/someotherpage" component={SomeOtherPage} />
+            <Route path="/latestcatches" component={LatestCatches} />
+            <Route component={NotFoundPage} />
+          </Switch>
+        </div>
+      </BrowserRouter>
+    </Provider>
 </IntlProvider>
 
 );

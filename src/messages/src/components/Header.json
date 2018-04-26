@@ -1,11 +1,19 @@
 [
   {
     "id": "home.link",
-    "defaultMessage": "This is a default message"
+    "defaultMessage": "This is the dashboard component defaultMessage"
   },
   {
     "id": "aboutUs.link",
-    "defaultMessage": "This is a default message"
+    "defaultMessage": "This is the aboutus component defaultMessage"
+  },
+  {
+    "id": "latestcatches.link",
+    "defaultMessage": "This is the latestcatches component defaultMessage"
+  },
+  {
+    "id": "map.link",
+    "defaultMessage": "This is the map component defaultMessage"
   },
   {
     "id": "someotherpage.link",

@@ -1,6 +1,9 @@
 {
   "home.link": "Hjem",
   "aboutUs.link": "Om Oss",
+  "latestcatches.link": "Siste fangst",
+  "latestcatches.header": "Siste fangst",
+  "map.link": "Kartet",
   "someotherpage.link": "Noe andre siden",
   "header.text": "WTF@?-Hvor er Fiskene @?",
   "dashboard.mainText": "denne er dashboard component",

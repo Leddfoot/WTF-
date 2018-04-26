@@ -9,14 +9,24 @@ const Header = () => (
     </h1>
     <NavLink to="/" >
       <FormattedMessage id="home.link"
-                              defaultMessage="This is a default message"
+                              defaultMessage="This is the dashboard component defaultMessage"
       />
 
     </NavLink>
     <NavLink to="/aboutus">
       <FormattedMessage id="aboutUs.link"
-                              defaultMessage="This is a default message"
+                              defaultMessage="This is the aboutus component defaultMessage"
       />
+  </NavLink>
+  <NavLink to="/latestcatches" >
+    <FormattedMessage id="latestcatches.link"
+                            defaultMessage="This is the latestcatches component defaultMessage"
+    />
+  </NavLink>
+  <NavLink to="/map" >
+    <FormattedMessage id="map.link"
+                            defaultMessage="This is the map component defaultMessage"
+    />
   </NavLink>
 
     <NavLink to="/someotherpage" >
