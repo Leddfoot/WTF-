@@ -3,6 +3,14 @@ import { FormattedMessage } from "react-intl";
 
 
 
+// Logged in used for conditional rendering of login and join now TODO
+// const loggedIn = true;
+const loggedIn = false;
+
+const joinNow =' <h1>Join Now!!</h1><p>Membership is not required to see the data, so check it out if you are just curious. But the site works best when everyone contributes. Membership allows you track your record, and is totally free</p><button>Join Now</button><p>Already a member? Sign in here</p><button>Sign In</button>'
+
+
+
 const Dashboard = () => (
   <div>
     <FormattedMessage id="dashboard.mainText"
@@ -26,8 +34,8 @@ const Dashboard = () => (
        area, the more information you will have, so tell a friend, and join and start adding
        your information</p>
 
-     //THIS SHOULD BE CONDITIONALLY RENDERED, USERS THAT ARE LOGGED IN SHOULDN'T SEE THIS
-       <h1>Join Now!!</h1>
+     {loggedIn &&
+       <div><h1>Join Now!!</h1>
          <p>Membership is not required to see the data, so check it out if you are just curious. But
            the site works best when everyone contributes. Membership allows you track your record, and
            is totally free</p>
@@ -35,7 +43,8 @@ const Dashboard = () => (
 
 
          <p>Already a member? Sign in here</p>
-         <button>Sign In</button>
+         <button>Sign In</button></div>
+     }
   </div>
 
 

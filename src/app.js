@@ -54,6 +54,7 @@ const messages = {
 };
 //const language = navigator.language.split(/[-_]/)[0];
  const language = 'no';
+ // const language = 'no';
 
 // React Router
 const routes = (
