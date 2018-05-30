@@ -1,3 +1,6 @@
+
+
+// *************DO NOT TOUCH BELOW HERE
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
@@ -37,12 +40,8 @@ store.dispatch(addFishCaughtOccurrence( { fishType:'catfish', weight:'7000 kilo'
 // store.dispatch(setTextFilter('fi'));
 
 const state = store.getState();
-const visiblefishCaughtOccurences = getVisiblefishCaughtOccurences(state.fishCaught, state.filters);
-console.log(visiblefishCaughtOccurences);
-
-
-// console.log(store.getState());
-
+let visiblefishCaughtOccurences = getVisiblefishCaughtOccurences(state.fishCaught, state.filters);
+// console.log(visiblefishCaughtOccurences);
 
 
 // React-INTL
@@ -54,7 +53,6 @@ const messages = {
 };
 //const language = navigator.language.split(/[-_]/)[0];
  const language = 'no';
- // const language = 'no';
 
 // React Router
 const routes = (

@@ -1,6 +1,38 @@
 [
   {
+    "id": "dashboard.welcomeText",
+    "defaultMessage": "This is a default message"
+  },
+  {
     "id": "dashboard.mainText",
+    "defaultMessage": "This is a default message"
+  },
+  {
+    "id": "dashboard.lowerTextHeader",
+    "defaultMessage": "This is a default message"
+  },
+  {
+    "id": "dashboard.lowerText",
+    "defaultMessage": "This is a default message"
+  },
+  {
+    "id": "dashboard.joinNow",
+    "defaultMessage": "This is a default message"
+  },
+  {
+    "id": "dashboard.joinNowMessage",
+    "defaultMessage": "This is a default message"
+  },
+  {
+    "id": "dashboard.joinNowButton",
+    "defaultMessage": "This is a default message"
+  },
+  {
+    "id": "dashboard.signInMessage",
+    "defaultMessage": "This is a default message"
+  },
+  {
+    "id": "dashboard.signInButton",
     "defaultMessage": "This is a default message"
   }
 ]

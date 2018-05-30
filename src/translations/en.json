@@ -1,14 +1,26 @@
 {
-    "home.link": "Home",
+
     "aboutUs.link": "About Us",
-    "someotherpage.link": "Some Other Page",
+    "aboutus.mainTextTopBeforeAnchor": "There is no us yet! It's just me, the handsome guy to the left in the picture. But who cares\r\n    about that, check out that huge halibut, caught on a trip in Yakutat Alaska.We caught that one thanks\r\n    to Captain Bill at the ",
+    "aboutus.mainTextTopAfterAnchor": ". Actually \"we\"\r\n    didn't really catch it. My Dad to the right did, but I helped reel it in.",
+    "dashboard.joinNow":"Join Now, It's Free",
+    "dashboard.joinNowButton":"Join Now",
+    "dashboard.joinNowMessage":" Membership is not required to see the data, so check it out if you are just curious. But the site works best when everyone contributes. Membership allows you track your record, and is totally free.",
+    "dashboard.lowerText":"Check the heatmap! If enough information has been gathered in your area, you can check out the heatmap and see a visual picture of where the best action is happening. This site was originally designed to track fishing activity in the Oslo Fjord. Oslo fjord is huge, and it can be hard as hell to find where the fish are hiding. Currently, most of the data collected is from there, but the more this application is used in your area, the more information you will have, so tell a friend, and join and start adding your catches.",
+    "dashboard.lowerTextHeader":"Not sure where to go fishing yet?",
+    "dashboard.mainText": "    WTF@ is an application that tracks and stores fishing results from your\r\n       fishing trips, and from others. This info is gathered and can give valuable\r\n      insight as to what type of fish people have been catching and and where they\r\n      caught them. You can filter the map if you are interested in a particular area,\r\n      and see what type of fish were caught, depth of catch, bait used, time of day\r\n      and more. Hopefully future updates will also show current \"cold spots,\" so you\r\n      don't have to waste a bunch of time fishing where others have already been and aren't\r\n      having any luck.",
+    "dashboard.signInButton":"Sign in",
+    "dashboard.signInMessage":"Already a member? Sign in here.",
+    "dashboard.welcomeText":"Welcome to WTF@?",
+    "header.languageButton": "Bytt til Norsk",
+    "header.text": "WTF@?-Where's The Fish @?",
+    "home.link": "Home",
     "latestcatches.link": "Latest Catches",
     "latestcatches.header": "Latest Catches",
     "map.link": "The Map",
-    "header.text": "WTF@?-Where's The Fish @?",
-    "dashboard.mainText": "This is the dashboard component",
-    "aboutus.mainText": "This is the about us component",
+    "map.mainText": "Behold ... The Map",
+    "someotherpage.link": "Some Other Page",
     "someotherpage.mainText": "This is the someotherpage component",
-    "404.mainText": "This is the 404 component",
-    "map.mainText": "Behold ... The Map"
+    "404.mainText": "This is the 404 component"
+
 }

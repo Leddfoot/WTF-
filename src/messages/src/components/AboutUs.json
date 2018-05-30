@@ -1,6 +1,10 @@
 [
   {
-    "id": "aboutus.mainText",
+    "id": "aboutus.mainTextTopBeforeAnchor",
+    "defaultMessage": "This is a default ssssssssss message"
+  },
+  {
+    "id": "aboutus.mainTextTopAfterAnchor",
     "defaultMessage": "This is a default message"
   }
 ]

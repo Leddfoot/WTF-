@@ -1,14 +1,26 @@
 {
-  "home.link": "Hjem",
+
   "aboutUs.link": "Om Oss",
+  "aboutus.mainTextTopBeforeAnchor": "Det er ingen oss enn\u00E5! Det er bare meg, den kjekke fyren til venstre i bildet. Men hvem bryr seg om det, sjekk ut den store kveite, fanget p\u00E5 en tur i Yakutat Alaska. Vi fanget den ene takket v\u00E6re Captain Bill p\u00E5 ",
+  "aboutus.mainTextTopAfterAnchor": ". Egentlig \"vi\" tok det ikke virkelig. Min far til h\u00F8yre gjorde det, men jeg hjalp med \u00E5 rulle den inn.",
+  "dashboard.joinNow":"Bli med nå er det gratis",
+  "dashboard.joinNowButton":"Registrere deg",
+  "dashboard.joinNowMessage":"Medlemskap er ikke nødvendig for å se dataene, så sjekk det ut hvis du bare er nysgjerrig. Men siden fungerer best når alle bidrar. Medlemskapet lar deg spore fangene dine, og er helt gratis.",
+  "dashboard.lowerText":"Sjekk heatmapen! Hvis det er nok informasjon samlet  i ditt omr\u00E5de, da kan du sjekke ut kartet og se et visuelt bilde av hvor den beste \"action\"skjer. Denne siden ble opprinnelig utformet for \u00E5 spore fiskeaktivitet i Oslofjorden. Oslofjorden er stor, og det kan v\u00E6re vanskelig som helvete \u00E5 finne hvor fisken gjemmer seg. For tiden er de fleste dataene hentet derfra, men jo mer denne applikasjonen brukes i ditt omr\u00E5de, desto mer informasjon vil du ha, s\u00E5 fortell en venn, og bli med og begynn \u00E5 legge til dine fangene.",
+  "dashboard.mainText": "WTF@\/HEF@(Where's the fish @\/Hvor er Fiskene@) er en app som sporer og lagrer fiske resultater fra din\r\n\u00A0 fisketurer, og fra andre's turene. Denne informasjonen er samlet og kan gi verdifullt\r\n\u00A0 Innsikt om hvilken type fisk folk har fanget og og hvor de har fanget dem. Du kan filtrere kartet hvis du er interessert i et bestemt omr\u00E5de,\u00A0 og se hvilken type fisk som ble fanget, fangstdybde, agn brukt, tid p\u00E5 dagen og mer. Forh\u00E5pentligvis vil fremtidige oppdateringer ogs\u00E5 vise dagens \"cold spots\", s\u00E5 du\r\n\u00A0 trenger ikke \u00E5 kaste bort masse tid fisking hvor andre allerede har v\u00E6rt og ikke har hatt napper.",
+  "dashboard.lowerTextHeader":"Ikke helt sikkert på hvor du skal fiske enda?",
+  "dashboard.signInButton":"Logg inn",
+  "dashboard.signInMessage":"Allerede medlem? Logg inn her.",
+  "dashboard.welcomeText":"Velkommen til WTF@?/HEF@?",
+  "header.languageButton": "Switch to English",
+  "header.text": "WTF@?-Hvor er Fiskene @?",
+  "home.link": "Hjem",
   "latestcatches.link": "Siste fangst",
   "latestcatches.header": "Siste fangst",
   "map.link": "Kartet",
+  "map.mainText": "Kartet",
   "someotherpage.link": "Noe andre siden",
-  "header.text": "WTF@?-Hvor er Fiskene @?",
-  "dashboard.mainText": "denne er dashboard component",
-  "aboutus.mainText": "denne er the about us component",
   "someotherpage.mainText": "denne er the someotherpage component",
-  "404.mainText": "Denne er the 404 component",
-  "map.mainText": "Kartet"
+  "404.mainText": "Denne er the 404 component"
+
 }

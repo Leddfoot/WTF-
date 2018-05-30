@@ -1,11 +1,11 @@
 [
   {
-    "id": "home.link",
-    "defaultMessage": "This is the dashboard component defaultMessage"
+    "id": "header.languageButton",
+    "defaultMessage": "Switch Language/Bytt Språk"
   },
   {
-    "id": "aboutUs.link",
-    "defaultMessage": "This is the aboutus component defaultMessage"
+    "id": "home.link",
+    "defaultMessage": "This is the dashboard component defaultMessage"
   },
   {
     "id": "latestcatches.link",
@@ -14,6 +14,10 @@
   {
     "id": "map.link",
     "defaultMessage": "This is the map component defaultMessage"
+  },
+  {
+    "id": "aboutUs.link",
+    "defaultMessage": "This is the aboutus component defaultMessage"
   },
   {
     "id": "someotherpage.link",
