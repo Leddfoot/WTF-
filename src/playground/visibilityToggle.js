@@ -3,49 +3,39 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-let visible = false;
+class ToggleVisibility extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleVisibility = this.handleVisibility.bind(this)
+    this.state = {
+      visible: false,
+      name: 'who cares',
+      title: 'the book no one will ever read'
+    };
+  }
 
-const testObject = {
-  name: 'who cares',
-  title: 'the book no one will ever read',
-  gonnaShowMe: ['bullshit1', 'bullshit2', 'bullshit3']
+  handleVisibility() {
+    this.setState((prevState)=> {
+              return {
+              visible: !prevState.visible
+              };
+    });
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>Visibility Toggle</h1>
+        <button onClick={this.handleVisibility}>Toggle Me Whoopee!</button>
+        <ol>
+          {
+            this.state.visible ? <p>{this.state.title}</p> : ''
+          }
+        </ol>
+      </div>
+
+    );
+  }
 }
 
-console.log(testObject.title);
-
-
-const renderMe = () => {
-  const addStuff = (e) => {
-    e.preventDefault();
-    visible ? visible = false : visible = true;
-    console.log(visible);
-    renderMe();
-  };
-
-  const whatToRender = (
-  <div>
-    <h1>Visibility Toggle</h1>
-    <button onClick={addStuff}>Toggle Me Whoopee!</button>
-    <ol>
-      {
-        visible ? <p>{testObject.title}</p> : ''
-      }
-    </ol>
-  </div>
-  );
-
-ReactDOM.render(whatToRender, document.getElementById('app'));
-
-};
-
-
-
-
-renderMe();
-
-
-
-
-
-
-//*******************************************************************************
+ReactDOM.render(<ToggleVisibility />, document.getElementById('app'));

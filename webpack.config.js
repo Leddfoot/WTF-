@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/app.js',
+  entry: './src/playground/destructuring.js',
   // entry: './src/app.js',
 
   output: {

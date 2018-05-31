@@ -1,5 +1,6 @@
 
 
+
 // *************DO NOT TOUCH BELOW HERE
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -16,6 +17,7 @@ import configureStore from './store/configureStore';
 import { addFishCaughtOccurrence } from './actions/fishCaughtOccurrence.js';
 import { setTextFilter } from './actions/filters';
 import getVisiblefishCaughtOccurences from './selectors/fishCaughtOccurrence';
+import AddAFish from './components/AddAFish';
 import Dashboard from "./components/Dashboard";
 import AboutUs from "./components/AboutUs";
 import Header from "./components/Header";
@@ -25,6 +27,7 @@ import NotFoundPage from "./components/NotFoundPage";
 import SomeOtherPage from "./components/SomeOtherPage";
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
+
 
 //Store
 const store = configureStore();
@@ -41,7 +44,7 @@ store.dispatch(addFishCaughtOccurrence( { fishType:'catfish', weight:'7000 kilo'
 
 const state = store.getState();
 let visiblefishCaughtOccurences = getVisiblefishCaughtOccurences(state.fishCaught, state.filters);
-// console.log(visiblefishCaughtOccurences);
+console.log(store.getState());
 
 
 // React-INTL
@@ -51,8 +54,8 @@ const messages = {
     'no': messages_no,
     'en': messages_en
 };
-//const language = navigator.language.split(/[-_]/)[0];
- const language = 'no';
+let language = navigator.language.split(/[-_]/)[0];
+ // let language = 'no';
 
 // React Router
 const routes = (
@@ -65,7 +68,7 @@ const routes = (
             <Route path="/" component={Dashboard} exact={true} />
             <Route path="/aboutus" component={AboutUs} />
             <Route path="/map" component={Map} />
-            <Route path="/someotherpage" component={SomeOtherPage} />
+            <Route path="/addafish" component={AddAFish} />
             <Route path="/latestcatches" component={LatestCatches} />
             <Route component={NotFoundPage} />
           </Switch>

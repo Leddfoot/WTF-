@@ -1,9 +1,5 @@
 [
   {
-    "id": "header.languageButton",
-    "defaultMessage": "Switch Language/Bytt Språk"
-  },
-  {
     "id": "home.link",
     "defaultMessage": "This is the dashboard component defaultMessage"
   },
@@ -16,11 +12,11 @@
     "defaultMessage": "This is the map component defaultMessage"
   },
   {
-    "id": "aboutUs.link",
-    "defaultMessage": "This is the aboutus component defaultMessage"
+    "id": "addafish.link",
+    "defaultMessage": "This is a default message"
   },
   {
-    "id": "someotherpage.link",
-    "defaultMessage": "This is a default message"
+    "id": "aboutUs.link",
+    "defaultMessage": "This is the aboutus component defaultMessage"
   }
 ]

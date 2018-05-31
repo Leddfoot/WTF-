@@ -6,17 +6,20 @@ const AboutUs = () => (
     <hr />
     <p>
       <FormattedMessage id="aboutus.mainTextTopBeforeAnchor"
-                            defaultMessage="This is a default ssssssssss message"
-        />
+                            defaultMessage="This is a default message"
+      />
       <a href="http://www.glacierbearlodge.com">Glacier Bear Lodge</a>
-        <FormattedMessage id="aboutus.mainTextTopAfterAnchor"
+      <FormattedMessage id="aboutus.mainTextTopAfterAnchor"
                               defaultMessage="This is a default message"
-          />
+      />
   </p>
-  <p>WTF@ could use more help. If you like web development as much as lou like fishing, join the team and add
-  your pics here. Just submit a pull request on GithubADDLINKHERE or shoot me an emailADD MAILTO HERE.
-</p>
-  <img src="/images/bigDamnFish.jpg" />
+  <p>
+    <FormattedMessage id="aboutus.secondaryTextBeforeAnchor"
+                            defaultMessage="This is a default message"
+    />
+  <a href="https://github.com/Leddfoot/WTF-">Github WTF</a>.
+  </p>
+  <img src="/images/bigDamnFish.jpg" alt="Three scary looking guys standing by a huge halibut that they have caught and hung up."/>
   </div>
 );
 

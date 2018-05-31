@@ -1,8 +1,10 @@
 {
 
     "aboutUs.link": "About Us",
-    "aboutus.mainTextTopBeforeAnchor": "There is no us yet! It's just me, the handsome guy to the left in the picture. But who cares\r\n    about that, check out that huge halibut, caught on a trip in Yakutat Alaska.We caught that one thanks\r\n    to Captain Bill at the ",
+    "aboutus.mainTextTopBeforeAnchor": "There is no us yet! It's just me, the handsome guy to the left in the picture. But who cares\r\n    about that, check out that huge halibut, caught on a trip in Yakutat Alaska .We caught that one thanks\r\n    to Captain Bill at the ",
     "aboutus.mainTextTopAfterAnchor": ". Actually \"we\"\r\n    didn't really catch it. My Dad to the right did, but I helped reel it in.",
+    "aboutus.secondaryTextBeforeAnchor":"WTF@? could use more help. If you like web development as much as you like fishing, join the team. Just submit a pull request on ",
+    "addafish.link": "Add a Catch",
     "dashboard.joinNow":"Join Now, It's Free",
     "dashboard.joinNowButton":"Join Now",
     "dashboard.joinNowMessage":" Membership is not required to see the data, so check it out if you are just curious. But the site works best when everyone contributes. Membership allows you track your record, and is totally free.",
