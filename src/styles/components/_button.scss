@@ -1,0 +1,48 @@
+// Credit to  Hakim El Hattab who designed this styling
+// https://codepen.io/hakimel/pen/rJtus
+/*Reset*/
+.button {
+cursor: pointer;
+-webkit-appearance: none;
+}
+
+/* Custom */
+button {
+  border: 1px solid $white;
+  display: inline-block;
+  position: relative;
+  padding: $s-size $m-size;
+  top: 0;
+  font-size: $font-size-large;
+  font-family: $button-font;
+  border-radius: 4px;
+  background: $button-blue;
+  color: $white;
+  box-shadow: 0px 0px 0px rgba( 15, 165, 60, 0.1 );
+
+  -webkit-transform: translateZ(0);
+     -moz-transform: translateZ(0);
+      -ms-transform: translateZ(0);
+          transform: translateZ(0);
+
+  -webkit-transition: all 0.2s ease;
+     -moz-transition: all 0.2s ease;
+      -ms-transition: all 0.2s ease;
+          transition: all 0.2s ease;
+}
+
+button:hover {
+  top: -10px;
+  box-shadow: 0px 10px 10px rgba( 15, 165, 60, 0.2 );
+
+  -webkit-transform: rotateX(20deg);
+     -moz-transform: rotateX(20deg);
+      -ms-transform: rotateX(20deg);
+          transform: rotateX(20deg);
+}
+
+button:active {
+  top: 0px;
+  box-shadow: 0px 0px 0px rgba( 15, 165, 60, 0.0 );
+  background: $button-active-blue;
+}

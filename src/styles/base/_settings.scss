@@ -1,5 +1,7 @@
 // Colors
-
+$button-blue: #2e71dd;
+$button-active-blue: #0f54c4;
+$white: #fff;
 
 
 // Spacing
@@ -8,3 +10,13 @@ $m-size: 1.6rem;
 $l-size: 3.2rem;
 $xl-size: 4.8rem;
 $desktop-breakpoint: 45rem;
+
+//Font Sizes
+$font-size-large: 1.8rem;
+$font-size-hea: 5.6rem;
+$font-size-xl: 5.6rem;
+
+// Fonts
+$default-font: 'Nanum Pen Script', cursive;
+$backup-font: 'Dosis', sans-serif;
+$button-font: 'Dosis', sans-serif;

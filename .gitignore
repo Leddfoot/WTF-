@@ -4,3 +4,4 @@ public/dist/
 .env.development
 public/bundle.js
 yarn-error.log
+messages/

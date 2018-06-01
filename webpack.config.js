@@ -1,20 +1,20 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/playground/destructuring.js',
-  // entry: './src/app.js',
+  // entry: './src/playground/destructuring.j
+  entry: './src/app.js',
 
   output: {
     path: path.join(__dirname, 'public'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   module: {
     rules: [{
       loader: 'babel-loader',
       test: /\.js$/,
-      exclude: /node_modules/
+      exclude: /node_modules/,
     }, {
-      test:/\.s?css$/,
+      test: /\.s?css$/,
       use: [
         'style-loader',
         'css-loader',

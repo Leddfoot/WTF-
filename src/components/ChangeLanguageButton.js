@@ -10,7 +10,7 @@ class ChangeLanguageButton extends React.Component {
   render() {
     return (
       <div>
-        <button id='changeLanguage' onClick={this.changeLanguage}>
+        <button className="button" id='changeLanguage' onClick={this.changeLanguage}>
             <FormattedMessage id="header.languageButton"
                                       defaultMessage="Switch Language/Bytt Språk"
             />
