@@ -9,10 +9,22 @@ html, body {
 }
 
 body {
-  background: url('/images/backgroundImg.jpg') repeat 0 0;
+  font-family: $default-font, $backup-font;
+  font-size: $font-size-large;
   text-align: center;
+  background: url('/images/backgroundImg.jpg') repeat 0 0;
   box-sizing: border-box;
   -webkit-animation: slide 500s linear infinite;
+}
+
+.future-navbar {
+  padding-bottom: $m-size;
+  a {
+    padding: 0 $l-size;
+    text-decoration: none;
+  }
+
+
 }
 
 @-webkit-keyframes slide {
@@ -20,16 +32,6 @@ body {
     to { background-position: -2000px 0; }
 }
 
-
-//*****************************************
-body {
-  // background-color: grey;
-      font-family: $default-font, $backup-font;
-      // font-family: 'Nanum Pen Script', cursive;
-    // font-family: 'Dosis', sans-serif;
-  // font-family: Monospace, Helvetica, Arial, sans-serif;
-  font-size: $font-size-large;
-  }
 
 img {
   max-width: 450px;

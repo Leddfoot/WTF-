@@ -8,7 +8,7 @@ import { FormattedMessage } from "react-intl";
 const loggedIn = true;
 
 const Dashboard = () => (
-  <div className="box-layout">
+  <div className="content-container">
 
     <h1><FormattedMessage id="dashboard.welcomeText"
                           defaultMessage="Welcome to WTF@?"

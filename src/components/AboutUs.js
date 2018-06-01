@@ -3,7 +3,6 @@ import { FormattedMessage } from "react-intl";
 
 const AboutUs = () => (
   <div>
-    <hr />
     <p>
       <FormattedMessage id="aboutus.mainTextTopBeforeAnchor"
                             defaultMessage="This is a default message"
