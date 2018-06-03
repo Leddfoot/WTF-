@@ -6,18 +6,24 @@ const store = createStore((state =
     name: 'bullshitter'
   },
   action)=> {
-  console.log('running');
+  // console.log('running');
   switch (action.type) {
     case 'INCREMENT':
-    const incrementBy = typeof action.incrementBy === 'number' ? action.incrementBy : 1;
-    return {
-      count: state.count + incrementBy
+        return {
+      count: state.count + action.incrementBy
     };
     case 'DECREMENT':
-    const decrementBy = typeof action.decrementBy === 'number' ? action.decrementBy : 1;
     return {
-      count: state.count - decrementBy
+      count: state.count - action.decrementBy
     };
+    case 'RESET':
+      return {
+        count: 0
+      }
+      case 'SET':
+        return {
+          count: action.count
+        }
     case 'CHANGE_NAME':
     return {
       name: 'Newbullshitter'
@@ -46,32 +52,40 @@ const unsubscribe = store.subscribe(()=> {
 
 // ACTIONS *********************
 // an action is only an object that is getting sent to the store
-store.dispatch({
-  type: 'INCREMENT'
-});
+//these are just inline, we will use action generators below instead
 
-store.dispatch({
+
+const addToCounter = ({ incrementBy = 1 } = {} ) => ({
   type: 'INCREMENT',
-  incrementBy: 5
+  incrementBy
 });
 
-
-store.dispatch({
-  type: 'DECREMENT'
-});
-
-store.dispatch({
+const decrementCounter = ({ decrementBy = 1 } = {} ) => ({
   type: 'DECREMENT',
-  decrementBy: 50
+  decrementBy
 });
 
-store.dispatch({
-  type: 'CHANGE_NAME'
+const setCounter = ({ count = 77} = {} ) => ({
+  type: 'SET',
+  count
 });
 
-store.dispatch({
-  type: 'CHANGE_NAME'
+const resetCounter = ({} = {} ) => ({
+  type: 'RESET',
 });
+
+
+
+store.dispatch(addToCounter());
+store.dispatch(addToCounter( {incrementBy:5} ));
+
+store.dispatch(decrementCounter());
+store.dispatch(decrementCounter( {decrementBy:5} ));
+store.dispatch(setCounter( {count: 135} ));
+store.dispatch(resetCounter());
+
+// console.log(store.getState());
+
 
 
 ///************RESTORE BELOW HERE TO GET BACK TO ORIGINAL

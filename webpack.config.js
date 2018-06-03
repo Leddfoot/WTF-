@@ -1,8 +1,8 @@
 const path = require('path');
 
 module.exports = {
-  // entry: './src/playground/destructuring.j
-  entry: './src/app.js',
+  // entry: './src/playground/hoc.js',
+  entry: './src/appTest.js',
 
   output: {
     path: path.join(__dirname, 'public'),

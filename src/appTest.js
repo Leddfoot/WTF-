@@ -5,12 +5,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
 import { IntlProvider, FormattedMessage, addLocaleData } from 'react-intl';
-import { Provider } from 'react-redux';
+import { Provider, connect } from 'react-redux';
 import locale_En from 'react-intl/locale-data/en';
 import locale_no from 'react-intl/locale-data/no';
 import messages_no from './translations/no.json';
 import messages_en from './translations/en.json';
 import configureStore from './store/configureStore';
+import { setLanguage } from './actions/language.js';
 import { addFishCaughtOccurrence } from './actions/fishCaughtOccurrence.js';
 import { setTextFilter } from './actions/filters';
 import getVisiblefishCaughtOccurences from './selectors/fishCaughtOccurrence';
@@ -33,17 +34,15 @@ const store = configureStore();
 store.dispatch(addFishCaughtOccurrence({ fishType: 'Kveite', weight: '1 kilo' }));
 store.dispatch(addFishCaughtOccurrence({ fishType: 'catfish', weight: '2 kilo' }));
 store.dispatch(addFishCaughtOccurrence({ fishType: 'catfish', weight: '3 kilo' }));
-store.dispatch(addFishCaughtOccurrence({ fishType: 'catfish', weight: '4 kilo' }));
-store.dispatch(addFishCaughtOccurrence({ fishType: 'catfish', weight: '5 kilo' }));
-store.dispatch(addFishCaughtOccurrence({ fishType: 'catfish', weight: '7000 kilo' }));
-// store.dispatch(getLanguage());
-
-// store.dispatch(setTextFilter('fi'));
+// store.dispatch(addFishCaughtOccurrence({ fishType: 'catfish', weight: '4 kilo' }));
+// store.dispatch(addFishCaughtOccurrence({ fishType: 'catfish', weight: '5 kilo' }));
+// store.dispatch(addFishCaughtOccurrence({ fishType: 'catfish', weight: '7000 kilo' }));
+store.dispatch(setLanguage({ language: 'en' }))
 
 const state = store.getState();
 const visiblefishCaughtOccurences = getVisiblefishCaughtOccurences(state.fishCaught, state.filters);
 console.log(store.getState());
-console.log(state)
+
 
 
 // React-INTL
@@ -54,7 +53,9 @@ const messages = {
   en: messages_en,
 };
 // const language = navigator.language.split(/[-_]/)[0];
-let language = 'no';
+let language = 'en';
+
+
 
 let changeLanguage = function() {
    console.log('changeLanguage');
@@ -66,8 +67,8 @@ const renderRoutes = (newLanguage) => {
   console.log(`newLanguage= ${newLanguage}`)
 
   routes = (
-    <IntlProvider locale={language} key={newLanguage} messages={messages[newLanguage]}>
-      <Provider store={store}>
+    <Provider store={store}>
+      <IntlProvider locale={language} key={newLanguage} messages={messages[newLanguage]}>
         <BrowserRouter>
           <div>
             <Header />
@@ -81,8 +82,8 @@ const renderRoutes = (newLanguage) => {
             </Switch>
           </div>
         </BrowserRouter>
-      </Provider>
-    </IntlProvider>
+      </IntlProvider>
+    </Provider>
   );
 }
 
