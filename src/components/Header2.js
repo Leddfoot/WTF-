@@ -5,7 +5,14 @@ import ChangeLanguageButton2 from './ChangeLanguageButton2';
 // import ChangeLanguageButton from './ChangeLanguageButton';
 import { connect } from 'react-redux';
 
-const Header = () => (
+
+  function log() {
+    console.log(this.props);
+  }
+
+const Header2 = (props) => (
+
+
   <div className="header" id="header">
     <div className="content-container">
       <div className="header__content">
@@ -13,6 +20,7 @@ const Header = () => (
           <FormattedMessage id="header.text"/>
         </h1>
         <ChangeLanguageButton2 />
+        
       </div>
     </div>
 
@@ -51,4 +59,12 @@ const Header = () => (
   </div>
 );
 
-export default Header;
+const mapStateToProps = (state) => {
+  return {
+    language: state.language,
+    fishCaught: state.fishCaught,
+    filters: state.filters
+  }
+};
+
+export default connect (mapStateToProps)(Header2);

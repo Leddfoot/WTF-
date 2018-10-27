@@ -6,4 +6,19 @@
   opacity: 0.8;
   margin-bottom: $m-size;
   border-radius: $m-size;
+  // padding-bottom: $xl-size;
+}
+
+.content-container-with-image {
+  //need this to keep image from being transparent
+  margin: 0 auto;
+  padding: 0 $m-size;
+  max-width: 80rem;
+  background: white;
+  background: rgba(255, 255, 255, 0.8);
+  margin-bottom: $m-size;
+  border-radius: $m-size;
+  img {
+    opacity: 1;
+  }
 }

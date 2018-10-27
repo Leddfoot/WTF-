@@ -1,23 +1,38 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { FormattedMessage } from "react-intl";
+import { setLanguage } from '../actions/language'; //This should be unneccessary. this should be coming from connect
 
-class ChangeLanguageButton extends React.Component {
-  changeLanguage(e) {
-    e.preventDefault();
-     console.log('I dont work. connect to state and refactor');
-  }
+export const ChangeLanguageButton = ({ setLanguage }) => (
+  <div>
+    <button className="button" id='changeLanguage' onClick={() => setLanguage('en')}>
+      <FormattedMessage id="header.languageButton"
+        defaultMessage="Switch Language/Bytt Språk"
+      /><br/>I don't work yet.
+    </button>
+  </div>
+);
 
-  render() {
-    return (
-      <div>
-        <button className="button" id='changeLanguage' onClick={this.changeLanguage}>
-            <FormattedMessage id="header.languageButton"
-                                      defaultMessage="Switch Language/Bytt Språk"
-            />
-        </button>
-      </div>
-    );
-  }
-}
+// class ChangeLanguageButton extends React.Component {
+//
+//   render() {
+//     return (
+//       <div>
+//         <button className="button" id='changeLanguage' onClick={this.changeLanguage}>
+//             <FormattedMessage id="header.languageButton"
+//                                       defaultMessage="Switch Language/Bytt Språk"
+//             />
+//         </button>
+//       </div>
+//     );
+//   }
+// }
 
-export default ChangeLanguageButton;
+
+const mapDispatchToProps = (dispatch) => ({
+  setLanguage: () => dispatch(setLanguage())
+});
+
+// export default ChangeLanguageButton;
+export default connect(undefined, mapDispatchToProps)(ChangeLanguageButton);

@@ -2,7 +2,7 @@ import React from 'react';
 import { FormattedMessage } from "react-intl";
 
 const AboutUs = () => (
-  <div>
+  <div className="content-container-with-image">
     <p>
       <FormattedMessage id="aboutus.mainTextTopBeforeAnchor"
                             defaultMessage="This is a default message"
@@ -18,7 +18,7 @@ const AboutUs = () => (
     />
   <a href="https://github.com/Leddfoot/WTF-">Github WTF</a>.
   </p>
-  <img src="/images/bigDamnFish.jpg" alt="Three scary looking guys standing by a huge halibut that they have caught and hung up."/>
+  <img className="bigDamnFish" src="/images/bigDamnFish.jpg" alt="Three scary looking guys standing by a huge halibut that they have caught and hung up."/>
   </div>
 );
 

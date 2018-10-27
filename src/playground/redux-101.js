@@ -1,5 +1,41 @@
 import { createStore } from 'redux';
 
+
+//action is just an object that gets sent to the store
+//type 'THE_UPPERCASE_STUFF'
+//EXAMPLe:
+{
+type: 'TAKE_A_SHIT'
+} //THIS IS THE ACTION
+// SEND IT LIKE this
+store.dispatch({{
+type: 'TAKE_A_SHIT'
+}})
+
+//  DYNAMIC ACTIONS IE: PASS MORE INFO THAN JUST THE ACTION
+
+ export const changeLanguage = () => {
+   type: 'SET_CURRENT_LANGUAGE',
+   currentLanguage: 'en'
+ }
+CASE 'SET_CURRENT_LANGUAGE':
+return {
+  CurrentLanguage: action.language
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const store = createStore((state =
   {
     count: 220,
@@ -32,6 +68,38 @@ const store = createStore((state =
       return state;
   }
 });
+// const store = createStore((state =
+//   {
+//     count: 220,
+//     name: 'bullshitter'
+//   },
+//   action)=> {
+//   // console.log('running');
+//   switch (action.type) {
+//     case 'INCREMENT':
+//         return {
+//       count: state.count + action.incrementBy
+//     };
+//     case 'DECREMENT':
+//     return {
+//       count: state.count - action.decrementBy
+//     };
+//     case 'RESET':
+//       return {
+//         count: 0
+//       }
+//       case 'SET':
+//         return {
+//           count: action.count
+//         }
+//     case 'CHANGE_NAME':
+//     return {
+//       name: 'Newbullshitter'
+//     };
+//     default:
+//       return state;
+//   }
+// });
 
 
 //Subscribe is called everytime there are changes to the store

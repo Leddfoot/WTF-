@@ -12,9 +12,14 @@ body {
   font-family: $default-font, $backup-font;
   font-size: $font-size-large;
   text-align: center;
-  background: url('/images/backgroundImg.jpg') repeat 0 0;
+  // background: url('/images/backgroundImg.jpg') repeat 0 0;
+  // background: url('/images/backgroundImg.jpg') repeat-y 0 0;
+  background: url('/images/backgroundImg.jpg') 0 0;
+  background-repeat: repeat-x;
+  background-size: 100% 100%;
+
   box-sizing: border-box;
-  -webkit-animation: slide 500s linear infinite;
+  // -webkit-animation: slide 500s linear infinite; //Have to fix the background to move in both directionsz
 }
 
 .future-navbar {
@@ -35,5 +40,4 @@ body {
 
 img {
   max-width: 450px;
-  max-width: 450pxpx;
 }

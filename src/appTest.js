@@ -26,25 +26,6 @@ import SomeOtherPage from './components/SomeOtherPage';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 
-
-// Store
-const store = configureStore();
-
-
-store.dispatch(addFishCaughtOccurrence({ fishType: 'Kveite', weight: '1 kilo' }));
-store.dispatch(addFishCaughtOccurrence({ fishType: 'catfish', weight: '2 kilo' }));
-store.dispatch(addFishCaughtOccurrence({ fishType: 'catfish', weight: '3 kilo' }));
-// store.dispatch(addFishCaughtOccurrence({ fishType: 'catfish', weight: '4 kilo' }));
-// store.dispatch(addFishCaughtOccurrence({ fishType: 'catfish', weight: '5 kilo' }));
-// store.dispatch(addFishCaughtOccurrence({ fishType: 'catfish', weight: '7000 kilo' }));
-store.dispatch(setLanguage({ language: 'en' }))
-
-const state = store.getState();
-const visiblefishCaughtOccurences = getVisiblefishCaughtOccurences(state.fishCaught, state.filters);
-console.log(store.getState());
-
-
-
 // React-INTL
 addLocaleData([...locale_En, ...locale_no]);
 
@@ -55,23 +36,36 @@ const messages = {
 // const language = navigator.language.split(/[-_]/)[0];
 let language = 'en';
 
-
-
 let changeLanguage = function() {
    console.log('changeLanguage');
 };
 
+// Store
+const store = configureStore();
+
+// store.dispatch(addFishCaughtOccurrence({ fishType: 'Kveite', weight: '1 kilo' }));
+// store.dispatch(addFishCaughtOccurrence({ fishType: 'catfish', weight: '2 kilo' }));
+// store.dispatch(addFishCaughtOccurrence({ fishType: 'catfish', weight: '3 kilo' }));
+// store.dispatch(addFishCaughtOccurrence({ fishType: 'catfish', weight: '4 kilo' }));
+// store.dispatch(addFishCaughtOccurrence({ fishType: 'catfish', weight: '5 kilo' }));
+// store.dispatch(addFishCaughtOccurrence({ fishType: 'catfish', weight: '7000 kilo' }));
+// store.dispatch(setLanguage( language ));
+
+// const state = store.getState();
+// const visiblefishCaughtOccurences = getVisiblefishCaughtOccurences(state.fishCaught, state.filters);
+// console.log(store.getState());
+
 let routes = '';
 // Test Re rendering
 const renderRoutes = (newLanguage) => {
-  console.log(`newLanguage= ${newLanguage}`)
+  // console.log(`newLanguage= ${newLanguage}`)
 
   routes = (
     <Provider store={store}>
       <IntlProvider locale={language} key={newLanguage} messages={messages[newLanguage]}>
         <BrowserRouter>
           <div>
-            <Header />
+            <Header onClick={renderRoutes}/>
             <Switch>
               <Route path="/" component={Dashboard} exact />
               <Route path="/aboutus" component={AboutUs} />
@@ -88,6 +82,6 @@ const renderRoutes = (newLanguage) => {
 }
 
 renderRoutes(language);
-changeLanguage();
+// changeLanguage();
 
 ReactDOM.render(routes, document.getElementById('app'));

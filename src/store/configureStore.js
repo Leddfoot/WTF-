@@ -2,24 +2,31 @@ import { createStore, combineReducers} from 'redux';
 import fishCaughtOccurencesReducer from '../reducers/fishCaughtOccurrence';
 import filtersReducer from '../reducers/filters';
 import languageReducer from '../reducers/language';
+import testStateCreator from '../reducers/testStateCreator';
+import { Provider, intlReducer } from 'react-intl-redux'
+import { updateIntl } from 'react-intl-redux';
 
 
 //store creation
 export default () => {
   const store = createStore(
     combineReducers({
-      // language: language,
+      language: languageReducer,
       fishCaught: fishCaughtOccurencesReducer,
-      filters: filtersReducer
-    })
+      filters: filtersReducer,
+      testState: testStateCreator,
+      intl: intlReducer,
+      // locales: localesReducer,
+    }),
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
   );
   return store;
 };
 
 const demoState = {
-  language: {
+  language: [{ //NOTE: MUST BE AN ARRAY, REACt WILL NOT WORK WITH CHILD OBJECTS, ONLY ARRAYS
     language: 'en/no',
-  },
+  }],
   user: [{
     loggedin: false,
     id: 'asdf78adf78adsf78adfs78', //Will be UUID or anonymous

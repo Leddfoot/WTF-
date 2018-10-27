@@ -1,15 +1,12 @@
 // language Reducer
-const languageReducerDefaultState = [];
+const languageReducerDefaultState = {};
 
 export default (state = languageReducerDefaultState, action) => {
   switch (action.type) {
-    case 'SET_CURRENT_LANGUAGE':
-      return [
-        ...state,
-        action.language
-      ];
-      state.concat(action.language)
-
+    case 'SET_LANGUAGE':
+    return {
+      currentLanguage: action.newLanguage
+    }
     default:
       return state;
   }
